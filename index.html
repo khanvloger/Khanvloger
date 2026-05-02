@@ -14,11 +14,11 @@ text-align:center;
 }
 
 .profile img{
-width:120px;
-height:120px;
+width:130px;
+height:130px;
 border-radius:50%;
 border:4px solid red;
-box-shadow:0 0 20px red;
+box-shadow:0 0 30px red;
 margin-top:40px;
 }
 
@@ -27,23 +27,47 @@ p{color:#aaa;}
 
 .btn{
 display:block;
-margin:15px auto;
-width:80%;
+margin:12px auto;
+width:85%;
 padding:15px;
 background:linear-gradient(45deg, red, orange);
 color:white;
 text-decoration:none;
 border-radius:30px;
 font-size:18px;
-box-shadow:0 0 15px red;
+box-shadow:0 0 20px red;
+}
+
+.section{
+margin-top:30px;
+}
+
+.video{
+width:90%;
+margin:auto;
+margin-top:15px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 20px red;
 }
 
 iframe{
-width:90%;
+width:100%;
 height:220px;
 border:none;
-border-radius:15px;
-margin-top:20px;
+}
+
+.scroll{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:10px;
+}
+
+.scroll iframe{
+width:250px;
+height:140px;
+border-radius:10px;
 }
 </style>
 </head>
@@ -57,20 +81,30 @@ margin-top:20px;
 </div>
 
 <a class="btn" href="https://www.youtube.com/@khanvloger">▶ YouTube Channel</a>
-<a class="btn" href="https://instagram.com/@VlogerKhan ">📸 Instagram</a>
+<a class="btn" href="https://instagram.com/">📸 Instagram</a>
 <a class="btn" href="https://facebook.com/VlogerKhan">📘 Facebook Page</a>
+<a class="btn" href="https://www.youtube.com/@khanvloger?sub_confirmation=1">🔥 Subscribe</a>
 
+<div class="section">
 <h2>🔥 Latest Video</h2>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/8w8TfJadTQw" allowfullscreen></iframe>
+</div>
+</div>
 
-<div id="video"></div>
+<div class="section">
+<h2>🎬 More Videos</h2>
+<div class="scroll">
+<iframe src="https://www.youtube.com/embed/8w8TfJadTQw"></iframe>
+<iframe src="https://www.youtube.com/embed/8w8TfJadTQw"></iframe>
+<iframe src="https://www.youtube.com/embed/8w8TfJadTQw"></iframe>
+</div>
+</div>
 
-<script>
-const API_KEY = "PASTE_YOUR_API_KEY_HERE";
-const CHANNEL_ID = "PASTE_CHANNEL_ID_HERE";
+<div class="section">
+<h2>🔴 Live Support</h2>
+<a class="btn" href="https://www.youtube.com/@khanvloger/live">🔴 Watch Live</a>
+</div>
 
-fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=1`)
-.then(res => res.json())
-.then(data => {
-let videoId = data.items[0].id.videoId;
-document.getElementById("video").innerHTML =
-`<
+</body>
+</html>
