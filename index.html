@@ -6,61 +6,74 @@
 
 <style>
 body {
-  margin:0;
-  font-family:sans-serif;
-  background:#111;
-  color:white;
-  text-align:center;
-}
-
-header {
-  padding:20px;
+    margin:0;
+    font-family:sans-serif;
+    background:#111;
+    color:white;
+    text-align:center;
 }
 
 img {
-  width:120px;
-  border-radius:50%;
-  border:3px solid red;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin-top:20px;
 }
 
 h1 {
-  margin:10px 0;
+    font-size:32px;
+    margin:10px 0;
+}
+
+p {
+    color:#ccc;
 }
 
 .btn {
-  display:block;
-  margin:10px auto;
-  padding:12px;
-  width:80%;
-  max-width:300px;
-  background:red;
-  color:white;
-  text-decoration:none;
-  border-radius:25px;
+    display:block;
+    background:red;
+    color:white;
+    padding:15px;
+    margin:15px auto;
+    width:80%;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:18px;
 }
 
-.btn:hover {
-  background:darkred;
+.video {
+    margin:20px;
 }
 </style>
+
 </head>
 
 <body>
 
-<header>
-  <img src="https://via.placeholder.com/150">
-  <h1>VlogerKhan</h1>
-  <p>Daily Lifestyle Vlogs</p>
-</header>
+<!-- Profile Image -->
+<img src="https://i.imgur.com/yourimage.png">
 
-<a class="btn" href="https://www.youtube.com/@khanvloger">YouTube Channel</a>
-<a class="btn" href="https://www.facebook.com/">Facebook Page</a>
+<h1>VlogerKhan</h1>
+<p>Daily Lifestyle Vlogs</p>
 
+<!-- Buttons -->
+<a class="btn" href="https://youtube.com/@YOURCHANNEL" target="_blank">
+YouTube Channel
+</a>
+
+<a class="btn" href="https://facebook.com/YOURPAGE" target="_blank">
+Facebook Page
+</a>
+
+<!-- Latest Video -->
 <h2>Latest Video</h2>
 
-<iframe width="90%" height="200"
-src="https://www.youtube.com/embed/VIDEO_ID"
-frameborder="0" allowfullscreen></iframe>
+<div class="video">
+<iframe width="100%" height="220"
+src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+frameborder="0" allowfullscreen>
+</iframe>
+</div>
 
 </body>
 </html>
