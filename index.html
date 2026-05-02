@@ -1,84 +1,46 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhanVloger</title>
-
-<link rel="manifest" href="manifest.json">
+<title>VlogerKhan</title>
 
 <style>
-body {margin:0; font-family:sans-serif; background:#000; color:#fff;}
-header {text-align:center; padding:10px; background:#111;}
+body {
+  margin:0;
+  font-family:sans-serif;
+  background:#111;
+  color:white;
+  text-align:center;
+}
 
-.logo {
-  width:90px;
+header {
+  padding:20px;
+}
+
+img {
+  width:120px;
   border-radius:50%;
   border:3px solid red;
 }
 
-.title {
-  color:#ffcc00;
-  font-size:22px;
-  margin-top:5px;
-}
-
-/* Tabs */
-.tabs {
-  display:flex;
-  justify-content:space-around;
-  background:#111;
-}
-.tabs button {
-  flex:1;
-  padding:12px;
-  background:none;
-  border:none;
-  color:white;
-  font-size:14px;
-}
-
-/* Sections */
-.section {display:none; padding:10px;}
-.active {display:block;}
-
-iframe {
-  width:100%;
-  border-radius:10px;
-}
-
-/* Reels */
-.reel {
-  height:300px;
+h1 {
   margin:10px 0;
-  background:#222;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:10px;
 }
 
-/* Social */
-.social a {
-  display:inline-block;
-  margin:5px;
-  padding:8px 15px;
-  border-radius:20px;
-  text-decoration:none;
-  color:white;
-}
-.insta {background:#e1306c;}
-.fb {background:#1877f2;}
-
-/* Install button */
-.install-btn {
-  position:fixed;
-  bottom:80px;
-  right:15px;
+.btn {
+  display:block;
+  margin:10px auto;
+  padding:12px;
+  width:80%;
+  max-width:300px;
   background:red;
-  padding:10px 15px;
-  border-radius:20px;
-  cursor:pointer;
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+}
+
+.btn:hover {
+  background:darkred;
 }
 </style>
 </head>
@@ -86,59 +48,19 @@ iframe {
 <body>
 
 <header>
-<img src="logo.png" class="logo">
-<div class="title">KhanVloger</div>
+  <img src="https://via.placeholder.com/150">
+  <h1>VlogerKhan</h1>
+  <p>Daily Lifestyle Vlogs</p>
 </header>
 
-<div class="tabs">
-<button onclick="show('home')">🏠 Home</button>
-<button onclick="show('video')">🎬 Videos</button>
-<button onclick="show('reels')">📱 Reels</button>
-<button onclick="show('contact')">📞 Contact</button>
-</div>
+<a class="btn" href="https://www.youtube.com/@khanvloger">YouTube Channel</a>
+<a class="btn" href="https://www.facebook.com/">Facebook Page</a>
 
-<!-- HOME -->
-<div id="home" class="section active">
-<h3>🔥 Welcome to KhanVloger</h3>
-<p>Daily Lifestyle Vlogs</p>
-</div>
+<h2>Latest Video</h2>
 
-<!-- VIDEOS -->
-<div id="video" class="section">
-<h3>🎬 Latest Videos</h3>
-<iframe height="200"
-src="https://www.youtube.com/embed?listType=user_uploads&list=KhanVloger">
-</iframe>
-</div>
+<iframe width="90%" height="200"
+src="https://www.youtube.com/embed/VIDEO_ID"
+frameborder="0" allowfullscreen></iframe>
 
-<!-- REELS -->
-<div id="reels" class="section">
-<div class="reel">🔥 Your Shorts / Reels Here</div>
-<div class="reel">🔥 Add more videos</div>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" class="section">
-<h3>Follow Me</h3>
-
-<div class="social">
-<a href="https://instagram.com/VlogerKhan" class="insta">📸 Instagram</a>
-<a href="https://facebook.com/VlogerKhan" class="fb">📘 Facebook</a>
-</div>
-
-</div>
-
-<!-- Install Button -->
-<div class="install-btn" id="installBtn">📲 Install App</div>
-
-<script>
-// Tab switch
-function show(id){
-  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
-// Install app
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt', (e) => {
-  deferred
+</body>
+</html>
