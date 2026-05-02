@@ -6,53 +6,78 @@
 
 <style>
 body {
-    margin:0;
-    font-family:sans-serif;
-    background:linear-gradient(180deg,#000,#111);
-    color:white;
-    text-align:center;
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle, #0f0f0f, #000);
+  color:white;
+  text-align:center;
 }
 
-.profile {
-    margin-top:40px;
-}
-
+/* Profile */
 .profile img {
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    border:3px solid red;
-    box-shadow:0 0 20px red;
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:4px solid red;
+  margin-top:40px;
+  box-shadow:0 0 30px red;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow:0 0 10px red; }
+  to { box-shadow:0 0 40px red; }
 }
 
 h1 {
-    margin:10px 0;
-    font-size:34px;
+  font-size:32px;
+  margin:10px 0;
 }
 
 p {
-    color:#aaa;
+  color:#ccc;
 }
 
+/* Buttons */
 .btn {
-    display:block;
-    background:linear-gradient(45deg,#ff0000,#ff4d4d);
-    color:white;
-    padding:15px;
-    margin:15px auto;
-    width:85%;
-    border-radius:40px;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
+  display:block;
+  margin:15px auto;
+  padding:15px;
+  width:80%;
+  max-width:300px;
+  border-radius:50px;
+  text-decoration:none;
+  color:white;
+  font-size:18px;
+  background: linear-gradient(45deg, red, #ff4d4d);
+  box-shadow:0 0 20px red;
+  transition:0.3s;
 }
 
+.btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 30px red;
+}
+
+/* Video */
 .video {
-    margin:20px;
+  margin-top:30px;
 }
 
 iframe {
-    border-radius:15px;
+  width:90%;
+  height:200px;
+  border-radius:15px;
+  border:none;
+  box-shadow:0 0 20px #ff0000;
+}
+
+/* Footer */
+.footer {
+  margin-top:30px;
+  padding:10px;
+  font-size:14px;
+  color:#777;
 }
 </style>
 </head>
@@ -60,30 +85,24 @@ iframe {
 <body>
 
 <div class="profile">
-<img src="https://i.imgur.com/8Km9tLL.png">
-<h1>VlogerKhan</h1>
-<p>Daily Lifestyle Vlogs</p>
+  <img src="https://i.imgur.com/6VBx3io.png">
+  <h1>VlogerKhan</h1>
+  <p>Daily Lifestyle Vlogs</p>
 </div>
 
-<a class="btn" href="https://www.youtube.com/@khanvloger" target="_blank">
-▶ YouTube Channel
-</a>
-
-<a class="btn" href="https://instagram.com/vlogerkhan" target="_blank">
-📸 Instagram
-</a>
-
-<a class="btn" href="https://facebook.com/VlogerKhan" target="_blank">
-📘 Facebook Page
-</a>
-
-<h2>Latest Video</h2>
+<a class="btn" href="https://www.youtube.com/@khanvloger" target="_blank">▶ YouTube Channel</a>
+<a class="btn" href="https://instagram.com/@vlogerkhan target 📸 Instagram</a>
+<a class="btn" href="https://facebook.com/VlogerKhan" target="_blank">📘 Facebook Page</a>
 
 <div class="video">
-<iframe width="100%" height="220"
-src="https://www.youtube.com/embed/8w8TfJadTQw"
-frameborder="0" allowfullscreen>
-</iframe>
+  <h2>🔥 Latest Video</h2>
+
+  <iframe src="https://www.youtube.com/embed/8w8TfJadTQw"
+  allowfullscreen></iframe>
+</div>
+
+<div class="footer">
+  © 2026 VlogerKhan | Made with ❤️
 </div>
 
 </body>
